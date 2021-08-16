@@ -20,3 +20,6 @@ const response = {
 
 const { data: users = [] } = response;
 console.log(users);
+// rb:21のコードを単純化してみる
+const { data: users } = { data: [{}, {}, {}] };
+const { 'data': users } = { 'data': [{}, {}, {}] };
