@@ -7,6 +7,8 @@ const Person = function (name) {
 const kanae = Person.call({ gender: 'f' }, 'Kanae');
 console.log(kanae);
 
+
+
 // (1) new演算子をつけて呼び出したとき : 新規生成されるオブジェクト
 const dump = function() { console.log('`this` is', this); };
 const obj = new dump();
@@ -26,3 +28,7 @@ foo.dump();
 // (3) (1)・(2)以外の関数　[非Strictモード] : グローバルオブジェクト
 const dump1 = function () { console.log(this); };
 dump1();
+
+// (4) (1)・(2)以外の関数　[Strictモード] : undefined
+Person('somebody');
+console.log(name)
