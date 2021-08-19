@@ -22,3 +22,7 @@ const foo = {
   },
 };
 foo.dump();
+
+// (3) (1)・(2)以外の関数　[非Strictモード] : グローバルオブジェクト
+const dump1 = function () { console.log(this); };
+dump1();
