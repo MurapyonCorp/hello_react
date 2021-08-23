@@ -47,3 +47,5 @@ creamy.greet2();
 creamy.greet3();
 creamy.greet4();
 creamy.greet5();
+//  thisはclass構文内でしか使わないようにする
+// class構文内ではあらゆる関数の定義をアロー関数式で行う
