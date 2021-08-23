@@ -32,3 +32,14 @@ dump1();
 // (4) (1)・(2)以外の関数　[Strictモード] : undefined
 Person('somebody');
 console.log(name)
+
+class Foo { constructor() { console.log('`this` is', this);}}
+// Foo();
+new Foo();
+
+const fn = function () {
+  'use strict';
+  console.log(this);
+  console.log(globalThis);
+};
+fn();
