@@ -1,3 +1,4 @@
+// デフォルトエクスポートされた関数timesを名前付きエクスポートされた関数plusをインポート
 import times, { plus } from './modules/math.js';
 import _ from 'lodash';
 
