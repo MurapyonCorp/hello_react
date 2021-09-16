@@ -2,7 +2,8 @@ interface Status {
   level: number;
   maxHP: number;
   maxMP: number;
-  [additional: string]: number | string;
+  // 任意のキーのプロパティ値を定義する
+  [additional: string]: number | string;    // index Signature
 }
 
 const myStatus: Status = {
