@@ -10,7 +10,10 @@ class Rectangle {
 
   getArea = (): number => this.sideA * this.sideB;
 }
-
+/* 
+Rectangleクラスを独立させることでこのクラスの変更にSquareクラスが影響されることがなくなる。
+独立性が高く、保守性に優れている。
+*/
 class Square {
   readonly name = 'square';
   side: number;
