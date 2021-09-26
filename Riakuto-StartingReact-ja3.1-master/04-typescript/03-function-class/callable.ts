@@ -12,7 +12,9 @@
   console.log(add(1, 2));
   console.log(subtract(7, 2));
 }
+// ↑インターフェースとして呼び出し可能オブジェクトを定義して関数式に適用したもの
 
+// ↓アロー型アノテーション
 // in-line
 {
   const add: (n: number, m: number) => number = function (n, m) {
