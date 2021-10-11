@@ -5,5 +5,6 @@ const permissions = {
 };
 
 type PermsChar = keyof typeof permissions; // 'r' | 'w' | 'x'
+// keyof演算子：通常の式では使えない。型コンテキストのみで用いられる演算子。オブジェクトの型からキーを抜き出す。
 const readable: PermsChar = 'r';
 // const writable: PermsChar = 'z';  /* compile error */
