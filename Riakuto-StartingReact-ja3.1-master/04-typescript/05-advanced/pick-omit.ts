@@ -4,5 +4,5 @@ type Todo = {
   isDone: boolean;
 };
 
-type PickedTodo = Pick<Todo, 'title' | 'isDone'>;
-type OmittedTodo = Omit<Todo, 'description'>;
+type PickedTodo = Pick<Todo, 'title' | 'isDone'>;     //=> {title: string; isDone: boolean}
+type OmittedTodo = Omit<Todo, 'description'>;         //=> {title: string; isDone: boolean}
