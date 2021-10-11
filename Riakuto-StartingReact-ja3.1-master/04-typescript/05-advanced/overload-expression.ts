@@ -16,6 +16,10 @@ class CrisisCompact implements Compact {
   moonChalice = true;
 }
 
+/*
+型と実装を別々の名前にもできるというメリットがある。
+一般的な関数の型定義は ()　=> void のようなアロー構文でも書けるが、オーバーロードができなくなるので注意が必要
+*/
 type Transform = {
   (): void;
   (item: Brooch): void;
