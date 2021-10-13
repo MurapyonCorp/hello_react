@@ -3,6 +3,7 @@ class Foo extends Base { foo = () => { console.log('foo'); } }
 class Bar extends Base { bar = () => { console.log('bar'); } }
 
 const doDivide = (arg: Foo | Bar) => {
+  // クラスを下敷きにしていないただのオブジェクトでは使えない
   if (arg instanceof Foo) {
     arg.foo();
 //  arg.bar();  /* compile error */
