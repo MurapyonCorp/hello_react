@@ -1,3 +1,7 @@
+/*
+◎アンビエント宣言(Ambient Declarations)
+　既存のJavaScriptモジュールに型情報を付加する形の宣言。通常の宣言と区別して使う。
+*/
 declare class Brooch {
     pentagram: string;
 }
