@@ -19,4 +19,7 @@ const Currency = {
   },
 };
 
-export { Currency };
+export { Currency };    // 型エイリアスもオブジェクトも両方エクスポートされる。
+/*
+型と同じ名前のオブジェクトを定義することを公式ドキュメントではコンビネーション(Combination)と言われている。
+*/
