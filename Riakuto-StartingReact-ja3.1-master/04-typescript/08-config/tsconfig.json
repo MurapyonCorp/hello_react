@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
     "target": "es5",
+    /*
+    ◎libオプション
+      コンパイルに含めるライブラリを指定する。Reactでは以下の3つが含まれるように設定されている。
+      しかし、CRAでインストールに用いたテンプレートの中身次第で例えばインストールされているTypeScriptのバージョンが
+      3.7系以前ならばES2020はサポートされていない。esnextはES2019になってしまう。
+    */
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext"                 // コンパイルに使われるバージョンのTypeScriptがサポートしているECMAScriptの最新バージョン。
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -14,6 +20,11 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
+    /*
+    ◎moduleオプション
+      コンパイル後のモジュール構文をどのモジュールシステム形式にするか設定する。
+      es2015がES Module、TypeScript3.8以降でサポートされたes2020はES2020バージョンのES Moduleを指す。3.8以降ならばesnextでも同じ。
+    */
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
