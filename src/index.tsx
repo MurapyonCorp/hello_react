@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';          // Reactのコア本体のインポート
+import ReactDOM from 'react-dom';   // ReactDomレンダラーのインポート
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
