@@ -1,4 +1,8 @@
 import React from 'react';
+/*
+1行目が必要になる理由はtsconfig.jsonでjsxオプションをreactに設定している場合、JSXの記述はReact.createElement(...)のように変換されるから。
+createElementメソッドの上位モジュールであるReactがインポートされてないと変換後、参照エラーになってしまうという警告。
+*/
 import logo from './logo.svg';
 import './App.css';
 
