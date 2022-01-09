@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 /*
 1行目が必要になる理由はtsconfig.jsonでjsxオプションをreactに設定している場合、JSXの記述はReact.createElement(...)のように変換されるから。
 createElementメソッドの上位モジュールであるReactがインポートされてないと変換後、参照エラーになってしまうという警告。
@@ -6,14 +6,15 @@ createElementメソッドの上位モジュールであるReactがインポー�
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App: FC = () => {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-          Hello, World!
+          Edit
+          <code>src/App.tsx</code>
+          and save to reload.
         </p>
         <a
           className="App-link"
