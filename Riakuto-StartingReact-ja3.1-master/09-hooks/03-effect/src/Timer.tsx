@@ -16,7 +16,7 @@ const Timer: VFC<{ limit: number }> = ({ limit }) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (timeLeft === 0) setTimeLeft(limit);
-  });
+  }, [timeLeft, limit]);
 
   return (
     <Card>
