@@ -10,7 +10,6 @@ interface Quadrangle {
   sideD?: number;
 }
 
-// インターフェースでも関数の型を定義すれば、それがメンバーメソッドになる
 class Rectangle implements Shape, Quadrangle {
   readonly name = 'rectangle';
   sideA: number;
@@ -20,7 +19,7 @@ class Rectangle implements Shape, Quadrangle {
     this.sideA = sideA;
     this.sideB = sideB;
   }
-// 定義にアロー構文を使っているが、getArea():numberでもOK
+
   getArea = (): number => this.sideA * this.sideB;
 }
 

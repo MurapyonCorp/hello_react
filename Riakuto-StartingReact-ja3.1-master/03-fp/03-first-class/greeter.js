@@ -1,5 +1,10 @@
-// ↓代入を省略
-const greeter = (target) => () => console.log(`Hi, ${target}!`);
+const greeter = (target) => {
+  const sayHello = () => {
+    console.log(`Hi, ${target}!`);
+  };
+
+  return sayHello;
+};
 
 const greet = greeter('Step Jun');
 greet();

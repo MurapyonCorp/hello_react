@@ -1,16 +1,6 @@
-/*
-◎ユーザー定義の型ガード(User-Defined Type Guard)
-  クラスを下敷きにしていないただのオブジェクトではinstanceofの方法は使えないため、
-  自前で型を絞り込む仕組みを作る。
-*/
 type Address = { zipcode: string; town: string };
 type User = { username: string; address: Address };
 
-/*
-●型述語(Type Predicate)
-  関数isUser()の戻り値の型定義があarg is Userとなっている。
-  この関数がtrueを返す場合に引数argの型がUserであることがコンパイラに示唆される。
-*/
 const isUser = (arg: unknown): arg is User => {
   const u = arg as User;
 

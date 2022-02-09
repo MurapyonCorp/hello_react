@@ -33,7 +33,4 @@ function transform(item?: Brooch | Compact): void {
   }
 }
 
-transform();
-transform(new Brooch());
-transform(new CosmicCompact());
-transform(new CrisisCompact());
+export { transform, Brooch, CosmicCompact, CrisisCompact };

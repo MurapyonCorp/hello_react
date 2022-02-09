@@ -8,18 +8,18 @@ const promise = new Promise((resolve, reject) => {
   }
 });
 
-promise.then((value) => {       // valueにはresolve()で渡したものを受け取っている。
+promise.then((value) => {
     console.log('1.', value);
 
     return 'Succees again';
   })
-  .then((value) => {            // 14行目のreturnした値がvalueになる。
+  .then((value) => {
     console.log('2.', value);
   })
-  .catch((error) => {           // 1行目をfalseに書き換えるとreject()に渡したものがcatch()でerrorとして受け取られる。
+  .catch((error) => {
     console.error('3.', error);
   })
-  .finally(() => {              // 結果がどちらにせよfinally()に渡された関数は最後に必ず実行される。
+  .finally(() => {
     console.log('4.', 'Completed');
   });
 

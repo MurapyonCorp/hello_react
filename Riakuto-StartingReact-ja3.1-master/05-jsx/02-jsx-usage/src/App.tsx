@@ -3,10 +3,9 @@ import SummaryText from './components/SummaryText';
 import TextInput from './components/TextInput';
 import './App.css';
 
-// 定義済みのGreetsコンポーネントをJSXで呼んでいる
 const App: React.FunctionComponent = () => (
   <div className="App">
-    <Greets name="Patty" times={4}>   {/* <-- nameとtimesがprops(末尾参考)に相当する */}
+    <Greets name="Patty" times={4}>
       <span role="img" aria-label="rabbit">🐰</span>
     </Greets>
     <SummaryText>
@@ -20,11 +19,5 @@ const App: React.FunctionComponent = () => (
     <TextInput />
   </div>
 );
-/*
-◎ propsとは
-『Properties(プロパティ)』のの略で、コンポーネントを関数として考えたとき、その引数に相当するもの。
-クラスコンポーネントならpropsというメンバー変数として設定されるんだけど、
-基本的にはコンポーネントが呼ばれるときに外から与えられる読み取り専用の変数グループをオブジェクトにまとめたもの。
-*/
 
 export default App;

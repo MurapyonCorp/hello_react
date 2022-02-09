@@ -12,7 +12,7 @@ class Rectangle {
 }
 
 class Square extends Rectangle {
-  readonly name = 'square';     // readonly修飾子を削除する必要がある。
+  readonly name = 'square';
   side: number;
 
   constructor(side: number) {

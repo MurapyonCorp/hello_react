@@ -1,9 +1,7 @@
 import fetch from 'node-fetch';
 
-const getUser = async (userId) => {                           // 関数宣言時にasyncキーワードを付与することでその関数は非同期関数となる。
-  // 返される値がPromise.resolve()によってラップされたものになる。
-  const response = await fetch(                               // 非同期関数の中では他の非同期関数をawait演算子をつけて呼び出しが可能。
-    // await式により非同期関数を実行するとPromiseがresolveかrejectされるまで待ってくれる。
+const getUser = async (userId) => {
+  const response = await fetch(
     `https://jsonplaceholder.typicode.com/users/${userId}`,
   );
 
@@ -11,7 +9,7 @@ const getUser = async (userId) => {                           // 関数宣言時
     throw new Error(`${response.status} Error`);
   }
 
-  return response.json();                                     // resolveされたらawait式はラップしていたPromiseから値を抽出して返す。
+  return response.json();
 };
 
 console.log('-- Start --');

@@ -7,7 +7,3 @@ const dollars: Currency = {
 
 console.log(dollars);
 console.log(Currency.exchange(dollars, 'JPY'));
-/*
-コンビネーションされたオブジェクトをインポートすると型エイリアスのCurrencyとオブジェクトのCurrency、
-一つのインポート文でどちらも使えるようになる。
-*/

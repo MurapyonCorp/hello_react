@@ -4,7 +4,6 @@ interface Currency {
   amount: number;
 }
 
-// extendsによる」インターフェースの拡張と同等のことが交差型を使うことで可能になる
 interface IPayment extends Currency {
   date: Date;
 }

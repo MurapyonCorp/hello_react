@@ -1,6 +1,5 @@
 class Rectangle {
-  readonly name = 'rectangle';    // プロパティ初期化子(Property Initializer)
-  // readonlyでrectangleというメンバー変数を変更不可にする
+  readonly name = 'rectangle';
   sideA: number;
   sideB: number;
 

@@ -1,4 +1,4 @@
-import { VFC, useEffect, useMemo, useState, useCallback, useRef } from 'react';
+import { VFC, useEffect, useMemo, useState } from 'react';
 import { Button, Card, Icon, Statistic } from 'semantic-ui-react';
 import { getPrimes } from 'utils/math-tool';
 import './Timer.css';
@@ -10,25 +10,18 @@ type TimerProps = {
 const Timer: VFC<TimerProps> = ({ limit }) => {
   const [timeLeft, setTimeLeft] = useState(limit);
   const primes = useMemo(() => getPrimes(limit), [limit]);
-  const timerId = useRef<NodeJS.Timeout>();
-  const reset = useCallback(() => setTimeLeft(limit), [limit]);
+  const reset = () => setTimeLeft(limit);
   const tick = () => setTimeLeft((t) => t - 1);
 
   useEffect(() => {
-    const clearTimer = () => {
-      if (timerId.current) clearInterval(timerId.current);
-    };
+    const timerId = setInterval(tick, 1000);
 
-    reset();
-    clearTimer();
-    timerId.current = setInterval(tick, 1000);
-
-    return clearTimer;
-  }, [limit, reset]);
+    return () => clearInterval(timerId);
+  }, []);
 
   useEffect(() => {
-    if (timeLeft === 0) reset();
-  }, [timeLeft, reset]);
+    if (timeLeft === 0) setTimeLeft(limit);
+  }, [timeLeft, limit]);
 
   return (
     <Card>
